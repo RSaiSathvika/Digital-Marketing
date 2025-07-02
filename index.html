@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Agency - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        /* Highlighted Primary Button */
+        .btn-primary {
+            @apply bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+        }
+        /* Highlighted Secondary Button */
+        .btn-secondary {
+            @apply bg-gray-200 text-gray-800 px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Digital Agency</a>
+            <div class="space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Services</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page Section -->
+    <section id="landing-page" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 min-h-screen flex items-center">
+        <div class="container text-center">
+            <h1 class="text-5xl font-extrabold mb-6 leading-tight">Ignite Your Online Presence with Our Digital Expertise</h1>
+            <p class="text-xl mb-10 max-w-3xl mx-auto">We are a leading digital marketing agency dedicated to helping businesses thrive in the digital landscape. From SEO to social media, we've got you covered.</p>
+            <button class="btn-primary" onclick="window.location.href='services.html'">Get Started Today</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // No GA4 tracking on this page
+            // All gtag and console.log for GA4 events have been removed.
+
+            // Scroll Depth (if needed without GA4 events, otherwise remove this section too)
+            let scrollDepthsTracked = { '25': false, '50': false, '75': false, '100': false };
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = window.scrollY;
+                const scrollPercentage = (scrolled / scrollHeight) * 100;
+
+                if (scrollPercentage >= 25 && !scrollDepthsTracked['25']) {
+                    // console.log('Scroll Depth: 25%'); // Removed GA4 event logging
+                    scrollDepthsTracked['25'] = true;
+                }
+                if (scrollPercentage >= 50 && !scrollDepthsTracked['50']) {
+                    // console.log('Scroll Depth: 50%'); // Removed GA4 event logging
+                    scrollDepthsTracked['50'] = true;
+                }
+                if (scrollPercentage >= 75 && !scrollDepthsTracked['75']) {
+                    // console.log('Scroll Depth: 75%'); // Removed GA4 event logging
+                    scrollDepthsTracked['75'] = true;
+                }
+                if (scrollPercentage >= 98 && !scrollDepthsTracked['100']) {
+                    // console.log('Scroll Depth: 100%'); // Removed GA4 event logging
+                    scrollDepthsTracked['100'] = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
